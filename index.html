@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========= Meta básico ========= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Baby Shower | Samantha Victoria — Brandon & Laura</title>
+  <meta name="description" content="Acompáñanos a celebrar la llegada de nuestra pequeña Samantha Victoria con un Baby Shower inspirado en Monsters Inc (Boo). 6 de septiembre de 2025, 3:30 PM. Club House Condominio Alameda." />
+
+  <!-- ========= SEO / Social ========= -->
+  <meta property="og:title" content="Baby Shower | Samantha Victoria" />
+  <meta property="og:description" content="Celebremos juntos la llegada de Samantha Victoria. Temática Monsters Inc (Boo). 6 de septiembre de 2025 — 3:30 PM." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="boo.png" />
+  <meta property="og:locale" content="es_BO" />
+  <meta name="theme-color" content="#ff9ebb" />
+
+  <!-- ========= Fuentes ========= -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- ========= Favicon (opcional: reemplazar rutas) ========= -->
+  <link rel="icon" href="boo.png" type="image/png" />
+
+  <!-- ========= Datos estructurados (Evento) ========= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Baby Shower de Samantha Victoria",
+    "startDate": "2025-09-06T15:30:00-04:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Club House Condominio Alameda",
+      "address": "Cochabamba, Bolivia"
+    },
+    "image": ["boo.png"],
+    "description": "Baby Shower con temática Monsters Inc (Boo) para celebrar a Samantha Victoria.",
+    "organizer": {
+      "@type": "Person",
+      "name": "Brandon & Laura"
+    }
+  }
+  </script>
+
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ======= ANIMACIÓN DE INICIO ======= -->
+  <div id="overlay">
+    <div class="scene">
+      <img src="puerta.jpg" alt="Puerta" class="door2" id="door2">
+    </div>
+  </div>
+
+  <!-- ======= CONTENIDO PRINCIPAL (oculto inicialmente) ======= -->
+  <div id="main-content" style="display:none">
+    <!-- ======= Música (activar por interacción) ======= -->
+    <audio id="musica" preload="auto" loop>
+      <source src="monster.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ======= Navbar ======= -->
+    <header class="nav" role="banner">
+      <div class="container nav__bar" aria-label="Barra de navegación">
+        <div class="brand">Brandon & Laura</div>
+
+        <nav aria-label="Navegación principal">
+          <div class="nav__links" id="nav-links">
+            <a class="nav__link" href="#inicio">Inicio</a>
+            <a class="nav__link" href="#evento">Evento</a>
+            <a class="nav__link" href="#countdown">Cuenta regresiva</a>
+            <a class="nav__link" href="#galeria">Galería</a>
+            <a class="btn nav__cta" href="#regalos" aria-label="Ir a regalos">Regalos 🎁</a>
+          </div>
+
+          <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menú">
+            <!-- Ícono hamburguesa -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="#444" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+      <div id="nav-mobile" class="container nav__mobile hidden" role="dialog" aria-label="Menú móvil">
+        <a href="#inicio">Inicio</a>
+        <a href="#evento">Evento</a>
+        <a href="#countdown">Cuenta regresiva</a>
+        <a href="#galeria">Galería</a>
+        <a class="btn" href="#regalos">Regalos 🎁</a>
+      </div>
+    </header>
+
+    <!-- ======= HERO ======= -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="hero__decor" aria-hidden="true">
+          <img src="puerta.jpg" alt="" class="door doorClose" style="left:4%; top:8%">
+          <img src="puerta.jpg" alt="" class="door door--pink doorClose" style="left:72%; top:16%; animation-duration: 11s;">
+          <img src="puerta.jpg" alt="" class="door door--pink" style="left:35%; top:56%; animation-duration: 11s;">
+          <div class="spot" style="left:12%; top:58%"></div>
+          <div class="spot spot--teal" style="left:78%; top:68%; width:260px; height:260px"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <span class="badge hero__kicker">Temática: Monsters Inc (Boo)</span>
+        <h1 class="hero__title" id="hero-title">¡Baby Shower de <span style="color:var(--pink-500)">Samantha Victoria</span>!</h1>
+        <p class="hero__desc">
+          Acompáñanos a celebrar la llegada de nuestra pequeña princesa. Será una tarde llena de amor,
+          dulzura y sonrisas. <strong>6 de septiembre de 2025 • 3:30 PM</strong>
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn" href="#evento" aria-label="Ver detalles del evento">Ver detalles</a>
+          <a class="btn btn--ghost" href="#regalos" aria-label="Ir a la sección de regalos">Enviar un detalle</a>
+        </div>
+
+        <img class="boo" src="boo.png" alt="Ilustración de Boo (Monsters Inc)" loading="eager" />
+      </div>
+    </section>
+
+    <!-- ======= DETALLES DEL EVENTO ======= -->
+    <section id="evento" class="details" aria-labelledby="details-title">
+      <div class="container grid details__grid">
+        <div class="stack card">
+          <h2 class="section__title" id="details-title">Detalles del Evento</h2>
+          <p class="section__lead">¡Queremos que seas parte de esta hermosa celebración!</p>
+
+          <div class="item">
+            <div class="item__icon" aria-hidden="true">
+              <!-- Calendario SVG -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="4" width="18" height="17" rx="3" stroke="#ff9ebb" stroke-width="2"/>
+                <path d="M3 9h18" stroke="#9f7aea" stroke-width="2"/>
+                <path d="M8 2v4M16 2v4" stroke="#9f7aea" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="item__label">Fecha y hora</div>
+              <div>6 de septiembre de 2025 — 3:30 PM</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__icon" aria-hidden="true">
+              <!-- Pin SVG -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 22s8-6.14 8-12a8 8 0 10-16 0c0 5.86 8 12 8 12z" stroke="#4fd3d3" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="#9f7aea" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="item__label">Ubicación</div>
+              <div>C. Alto de la Alianza y Sarmiento</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__icon" aria-hidden="true">
+              <!-- WhatsApp SVG -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M20.5 11.5a8.5 8.5 0 11-15 5.3L4 22l5.5-1.5a8.5 8.5 0 0011-9z" stroke="#25D366" stroke-width="2"/>
+                <path d="M8.5 9.5c.4 2.4 2.6 4.6 5 5" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="item__label">Confirma asistencia</div>
+              <div class="flex" style="flex-wrap:wrap; gap:8px; margin-top:6px">
+                <a class="btn btn--ghost" href="https://wa.me/59175926215" target="_blank" rel="noopener">Confirmar con Brandon</a>
+                <a class="btn btn--ghost" href="https://wa.me/59165313554" target="_blank" rel="noopener">Confirmar con Laura</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="map" aria-label="Mapa de ubicación">
+            <!-- Mapa embebido (reemplaza si quieres) -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d400.19931606089807!2d-66.17616937871328!3d-17.3945511925064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-17.394466714125873!2d-66.17608705442937!5e0!3m2!1ses-419!2sbo!4v1756480840178!5m2!1ses-419!2sbo" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="center" style="margin-top:14px">
+            <a class="btn" href="https://maps.app.goo.gl/Fu5XFtufgvogZHpj8?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener">
+              Obtener direcciones
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CUENTA REGRESIVA ======= -->
+    <section id="countdown" class="count" aria-labelledby="count-title">
+      <div class="container">
+        <h2 class="section__title" id="count-title">Cuenta Regresiva</h2>
+        <p class="section__lead">¡Ya casi llega el gran día para conocer a nuestra pequeña!</p>
+
+        <div class="count__grid" role="timer" aria-live="polite">
+          <div class="count__box">
+            <div id="cd-days" class="count__num">00</div>
+            <div class="count__lbl">Días</div>
+          </div>
+          <div class="count__box">
+            <div id="cd-hours" class="count__num">00</div>
+            <div class="count__lbl">Horas</div>
+          </div>
+          <div class="count__box">
+            <div id="cd-mins" class="count__num">00</div>
+            <div class="count__lbl">Minutos</div>
+          </div>
+          <div class="count__box">
+            <div id="cd-secs" class="count__num">00</div>
+            <div class="count__lbl">Segundos</div>
+          </div>
+        </div>
+
+        <div id="count-status" class="count__status" aria-live="polite"></div>
+
+        <!-- Confetti overlay -->
+        <div class="confetti" id="confetti" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ======= GALERÍA ======= -->
+    <section id="galeria" class="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 class="section__title" id="gallery-title">Nuestra Galería</h2>
+        <p class="section__lead">Momentos especiales rumbo a la llegada de <strong>Samantha Victoria</strong> 💕</p>
+
+        <div class="gallery__grid">
+          <figure class="frame">
+            <img src="ecografia.png" alt="Ecografía de Samantha Victoria" loading="lazy" />
+            <figcaption>Primer contacto</figcaption>
+          </figure>
+
+          <figure class="frame">
+            <img src="laura.jpg" alt="Laura esperando con amor" loading="lazy" />
+            <figcaption>Esperando con amor</figcaption>
+          </figure>
+
+          <figure class="frame">
+            <img src="laura2.jpg" alt="Laura esperando con amor" loading="lazy" />
+            <figcaption>Esperando con amor</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= REGALOS ======= -->
+  <section id="regalos" style="background-color: #a3ce3c;" class="gifts" aria-labelledby="gifts-title">
+    <div class="container">
+      <h2 class="section__title" id="gifts-title">Un Detalle Especial</h2>
+      <p class="section__lead">
+        Lo más valioso para nosotros es que nos acompañes en este momento tan especial.  
+        Si deseas regalarnos un pequeño detalle, aquí encontrarás una forma sencilla de hacerlo 💕
+      </p>
+
+      <div class="panel">
+        <div>
+          <div class="qr">
+            <img src="qr.jpg" alt="Código QR para regalos" width="180" height="180" loading="lazy" />
+          </div>
+        </div>
+        <!-- <small>Gracias de corazón por todo tu cariño 💖</small> -->
+      </div>
+
+      <!-- Imagen boca justo debajo -->
+      <div class="boca-wrapper">
+        <img src="boca.png" alt="Boca decorativa" />
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- ======= FOOTER MEJORADO ======= -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__section">
+            <h3 class="footer__title">Brandon & Laura</h3>
+            <p class="footer__text">Celebrando la llegada de nuestra princesa Samantha Victoria</p>
+            <div class="footer__social">
+              <a href="#" class="social__link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social__link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/59175926215" class="social__link" aria-label="WhatsApp Brandon">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://wa.me/59165313554" class="social__link" aria-label="WhatsApp Laura">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer__section">
+            <h3 class="footer__title">Enlaces Rápidos</h3>
+            <ul class="footer__links">
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#evento">Detalles del Evento</a></li>
+              <li><a href="#countdown">Cuenta Regresiva</a></li>
+              <li><a href="#galeria">Galería</a></li>
+              <li><a href="#regalos">Regalos</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer__section">
+            <h3 class="footer__title">Información del Evento</h3>
+            <div class="footer__info">
+              <p><i class="fas fa-calendar-alt"></i> 6 de Septiembre, 2025</p>
+              <p><i class="fas fa-clock"></i> 3:30 PM</p>
+              <p><i class="fas fa-map-marker-alt"></i> C. Alto de la Alianza y Sarmiento</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            <p>© 2025 Brandum'Soft. Todos los derechos reservados.</p>
+          </div>
+          <div class="footer__credits">
+            <p>Hecho con <i class="fas fa-heart"></i> para nuestra princesa</p>
+          </div>
+        </div>
+        
+        <div class="footer__decoration">
+          <div class="footer__cloud"></div>
+          <div class="footer__cloud"></div>
+          <div class="footer__cloud"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
