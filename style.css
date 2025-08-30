@@ -601,6 +601,10 @@ section.visible {
 /* ===============================
    REGALOS
 ===============================*/
+.gifts{
+  overflow: hidden;
+}
+
 .gifts .panel {
   max-width: 400px;
   aspect-ratio: 1 / 1;   /* cuadrado flexible */
@@ -614,7 +618,7 @@ section.visible {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-
+  
   display: flex;           /* flex container */
   align-items: center;     /* centrado vertical */
   justify-content: center; /* centrado horizontal */
