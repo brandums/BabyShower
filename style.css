@@ -351,6 +351,7 @@ section.visible {
   transform: translateY(0);
 }
 .section__title{
+  z-index: 10;
   font-family:var(--font-display); font-weight:800; letter-spacing:.3px;
   font-size: clamp(1.6rem, 3.6vw, 2.4rem); text-align:center; margin:0 0 8px;
   position: relative;
@@ -368,7 +369,11 @@ section.visible {
   border-radius: 3px;
 }
 .section__lead{
-  text-align:center; color:var(--ink-60); max-width:780px; margin:0 auto 28px;
+  text-align:center; 
+  color:var(--ink-60); 
+  max-width:780px; 
+  margin:0 auto 28px;
+  z-index: 1000;
 }
 
 /* ===============================
